@@ -1,0 +1,94 @@
+*,::before,::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 75px;
+}
+
+body{
+    background-color: #e3e4e2;
+    transform: rotateZ(90deg);
+}
+
+.clock{
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+}
+.clock-surface{
+    position: relative;
+    background: #02f2f2;
+    height: 8em;
+    width: 8em;
+    border-radius: 50%;
+    border: 20px solid #F0F0F0;
+    box-shadow: 10px 10px 0.5rem #0008,
+                inset 5px 10px 0.5em 10px #0006;
+}
+
+.centreDot{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.hrHand{
+    position: absolute;
+    height: 12px;
+    width: 2.5rem;
+    box-shadow: 0 0 0.5rem #000;
+
+
+    background-color: #000;
+    transform-origin: 80%;
+}
+
+.minHand{
+    position: absolute;
+    height: 7px;
+    width: 3.4rem;
+    border-top-left-radius: 60%;
+    border-bottom-left-radius: 60%;
+    box-shadow: 0 0 0.5rem #000;
+    border: 1px solid #000;
+
+    background-color: #000;
+    transform-origin: 80%;
+}
+
+
+.secHand{
+    position: absolute;
+    height: 5px;
+    width: 4rem;
+    border-top-left-radius: 60%;
+    border-bottom-left-radius: 60%;
+    box-shadow: 0 0 0.5rem #000;
+
+    background-color: #000;
+    transform-origin: 80%;
+}
+
+@media screen and (max-width: 650px) {
+    .clock-surface{
+        height: 5em;
+        width: 5em;
+    }
+    .hrHand{
+        height: 12px;
+        width: 1.8rem;
+    }
+    
+    .minHand{
+        height: 7px;
+        width: 2.6rem;
+    }
+    
+    .secHand{
+        height: 4px;
+        width: 2.8rem;
+    }
+}
